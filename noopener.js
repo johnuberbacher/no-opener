@@ -5,7 +5,7 @@
  * 
  * @returns void
  */
-function NoOpener(){
+function noOpener(){
     //get elements
     var e = document.querySelectorAll('a[target="_blank"]:not([rel~="noopener"])');
     if(e.length){
