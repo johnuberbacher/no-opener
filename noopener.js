@@ -1,5 +1,5 @@
 /**
- * Function to tag all target="_blank" tags with rel="noopener"
+ * Function to tag all target="_blank" or target="blank" tags with rel="noopener"
  * 
  * See this article for more information https://dev.to/ben/the-targetblank-vulnerability-by-example
  * 
@@ -7,7 +7,7 @@
  */
 function noOpener(){
     //get elements
-    var e = document.querySelectorAll('a[target="_blank"]:not([rel~="noopener"])');
+    var e = document.querySelectorAll('a[target="_blank"]:not([rel~="noopener"]), a[target="blank"]:not([rel~="noopener"])');
     if(e.length){
         //loop through
         for (i = 0; i < e.length; ++i){
