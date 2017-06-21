@@ -1,6 +1,6 @@
 # no-opener
 
-This short script adds a rel attribute to your links to prevent location hijacking on target="_blank" links
+This script adds noopener and noreferrer rel attributre tags to your links to prevent location hijacking on target="_blank" or target="blank" links
 
 ## Installing / Getting started
 
