@@ -6,15 +6,15 @@
  * @returns void
  */
 function noOpener(){
-    //get elements
+    // Get elements
     var e = document.querySelectorAll('a[target="_blank"]:not([rel~="noopener"]), a[target="blank"]:not([rel~="noopener"])');
     if(e.length){
-        //loop through
+        // Loop through
         for (i = 0; i < e.length; ++i){
             //check for existing rel
             var rel = e[i].getAttribute('rel');
             if(rel){
-                //we don't want doubel noreferrer
+                // Prevent double noreferrer
                 rel = rel.replace('noreferrer','');
                 e[i].setAttribute('rel',rel+' noopener noreferrer');
             }else{
